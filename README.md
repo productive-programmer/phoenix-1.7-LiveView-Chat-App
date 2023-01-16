@@ -14,7 +14,7 @@ For the full project walkthrough or to take my free phoenix liveView course head
 
 
 
-# Chat
+# Chat App
 
 To start your Phoenix server:
 
