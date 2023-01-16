@@ -6,7 +6,7 @@ This is the finished version of my phoenix 1.7 liveview chat app that I built du
 
 ![Phoenix 1.7 LiveView Chat App](assets/chat-app-preview-phoenix-1-7-liveview.gif)
 
-If you want to see all of the code progress with snapshots of the code as I built it in progression then that is available exclusively in when you take the full version of my course. This is simply the finished version and it only works with Phoenix 1.7 not prior versions of phoenix, again additional details in my course if needed at productiveprogrammer.com
+If you want to see all of the code progress with snapshots of the code as I built it in progression then that is available exclusively in the full version of my course. This is simply the finished version. Please note it only works with Phoenix 1.7 not prior versions of phoenix, again additional details in my course if needed at productiveprogrammer.com
 
 
 
