@@ -1,6 +1,6 @@
 # Productive Programmer
 
-## Live Chat App with Phoenix LiveView 1.7 and TailwindCSS from ProductiveProgrammer.com
+## Phoenix 1.7 LiveView Chat App with TailwindCSS from ProductiveProgrammer.com
 
 This is the finished version of my phoenix 1.7 liveview chat app that I built during my project 1 walkthrough of the full version of my paid phoenix liveview course at https://ProductiveProgrammer.com
 
