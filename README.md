@@ -1,8 +1,16 @@
 # Productive Programmer
 
-## Live Chat App with Phoenix LiveView 1.7 and TailwindCSS
+## Live Chat App with Phoenix LiveView 1.7 and TailwindCSS from ProductiveProgrammer.com
 
-For the full project walkthrough and to take my free phoenix liveView course head over to: https://ProductiveProgrammer.com
+This is the finished version of my phoenix 1.7 liveview chat app that I built during my project 1 walkthrough of the full version of my paid phoenix liveview course at https://ProductiveProgrammer.com
+
+If you want to see all of the code progress with snapshots of the code as I built it in progression then that is available exclusively in when you take the full version of my course. This is simply the finished version and it only works with Phoenix 1.7 not prior versions of phoenix, again additional details in my course if needed at productiveprogrammer.com
+
+
+
+
+
+For the full project walkthrough or to take my free phoenix liveView course head over to: https://ProductiveProgrammer.com
 
 
 
@@ -15,12 +23,4 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+https://productiveprogrammer.com
