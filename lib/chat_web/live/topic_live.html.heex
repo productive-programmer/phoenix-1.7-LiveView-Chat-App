@@ -1,0 +1,115 @@
+<!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
+<!-- Background color split screen for large screens -->
+<div class="fixed top-0 left-0 h-full w-1/2 bg-white" aria-hidden="true"></div>
+<div class="fixed top-0 right-0 h-full w-1/2 bg-gray-50" aria-hidden="true"></div>
+<div class="relative flex min-h-screen flex-col">
+  <!-- Navbar -->
+  <nav class="flex-shrink-0 bg-gray-100">
+    <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <!-- Logo section -->
+        <div class="flex items-center px-2 lg:px-0 xl:w-64">
+          <div class="flex-shrink-0">
+            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=gray&shade=600" alt="Your Company">
+          </div>
+        </div>
+
+        <!-- Search section -->
+        <div class="flex flex-1 justify-center lg:justify-end">
+          <div class="w-full px-2 lg:px-6">
+            <p class="text-xl text-gray-600 font-bold px-4">Currently in Topic: <strong><%= @topic_name %></strong></p>
+          </div>
+        </div>
+        <!-- Links section -->
+        <div class="lg:w-80">
+          <div class="flex items-center justify-end">
+            <div class="flex">
+              <.link patch={~p"/"} class="ml-6 inline-flex items-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Change Topic</.link>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 3 column wrapper -->
+  <div class="mx-auto w-full max-w-7xl flex-grow lg:flex xl:px-8">
+    <!-- Left sidebar & main wrapper -->
+    <div class="min-w-0 flex-1 bg-white xl:flex">
+      <div class="border-b border-gray-200 bg-white xl:w-64 xl:flex-shrink-0 xl:border-b-0 xl:border-r xl:border-gray-200">
+        <div class="h-full py-6 pl-4 pr-6 sm:pl-6 lg:pl-8 xl:pl-0">
+          <!-- Start left column area -->
+          <div class="relative h-full" style="min-height: 12rem">
+            <!-- Start User List -->
+                <div id="user-list">
+                    <p class="pb-4 mb-2">Logged in as: <span class="font-bold"><%= @username %></span></p>
+
+                    <h3 class="font-bold pb-4 mb-4 border-b">Users online</h3>
+                    <%= for user <- @users_online do %>
+                      <p class="py-1 font-medium"><%= user %></p>
+                    <%= end %>
+                </div>
+                <!-- End User List -->
+          </div>
+          <!-- End left column area -->
+        </div>
+      </div>
+
+      <div class="bg-white lg:min-w-0 lg:flex-1">
+        <div class="h-full py-6 px-4 sm:px-6 lg:px-8">
+          <!-- Start main area-->
+          <div class="relative h-full" style="min-height: 36rem">
+            <p class="mb-4 lg:block xl:hidden">Chat Messages</p>
+            <!-- start our messages -->
+                <ul id="chat_messages" role="list" class="divide-gray-200 max-h-screen h-3/5 overflow-auto" phx-update="append">
+                  <%= for message_data <- @chat_messages do %>
+                    <.user_msg_heex msg_data={message_data} me={@username} />
+                  <%= end %>
+                </ul>
+            <!-- end of our messages -->
+            <.form
+                :let={f}
+                for={:chat}
+                id="chat-form"
+                phx-change="message_change"
+                phx-submit="submit_message"
+            >
+                <.input field={{f, :message}} value={@message} placeholder="Enter your message..." />
+            </.form>
+          </div>
+          <!-- End main area -->
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 pr-4 sm:pr-6 lg:flex-shrink-0 lg:border-l lg:border-gray-200 lg:pr-8 xl:pr-0">
+      <div class="h-full py-6 pl-6 lg:w-80">
+        <!-- Start right column area -->
+        <div class="relative h-full" style="min-height: 16rem">
+          <!-- Start whatever you want here -->
+            <p class="">Built by <strong>ProductiveProgrammer.com</strong></p>
+            <p><strong>Using: </strong></p>
+            <img src="/images/phoenix.png" alt="pp" class="mx-auto"/>
+            <p><strong>Learn Phoenix & Elixir at: </strong></p>
+            <p class="text-xl">ProductiveProgrammer.com</p>
+          <!-- End whatever you want here -->
+        </div>
+        <!-- End right column area -->
+      </div>
+    </div>
+  </div>
+</div>
